@@ -14,7 +14,6 @@ public class SerializableCuboidRegion implements Serializable {
     private final int minX, minY, minZ;
     private final int maxX, maxY, maxZ;
 
-    // 생성자: CuboidRegion에서 좌표를 추출합니다.
     public SerializableCuboidRegion(@NotNull CuboidRegion region) {
         BlockVector3 min = region.getMinimumPoint();
         BlockVector3 max = region.getMaximumPoint();
@@ -26,7 +25,6 @@ public class SerializableCuboidRegion implements Serializable {
         this.maxZ = max.z();
     }
 
-    // CuboidRegion 객체로 복원하는 메서드
     public CuboidRegion toCuboidRegion() {
         BlockVector3 min = BlockVector3.at(minX, minY, minZ);
         BlockVector3 max = BlockVector3.at(maxX, maxY, maxZ);

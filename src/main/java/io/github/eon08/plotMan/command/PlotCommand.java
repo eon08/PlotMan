@@ -53,7 +53,6 @@ public class PlotCommand implements CommandExecutor, TabCompleter {
     public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
         List<String> completions = new ArrayList<>();
         if (args.length == 1) {
-            // 첫 번째 인자가 입력된 경우 자동완성 제공
             if (sender.hasPermission("plot.command.create")) {
                 completions.add("create");
             }
@@ -94,7 +93,6 @@ public class PlotCommand implements CommandExecutor, TabCompleter {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             UUID playerUUID = p.getUniqueId();
-
             // 플롯 제거 로직 (추가 필요)
             // 예시: DB에서 해당 플레이어의 플롯을 삭제하는 코드 작성
             p.sendMessage("플롯이 제거되었습니다."); // 실제 로직에 따라 메시지 수정

@@ -12,7 +12,6 @@ public class ParticleUtil {
     public static void showPlotBorder(World world, @NotNull CuboidRegion region) {
         BlockVector3 min = region.getMinimumPoint();
         BlockVector3 outerMax = region.getMaximumPoint().add(1, 1, 1);
-
         Location[] corners = {
                 new Location(world, min.x(), min.y(), min.z()),
                 new Location(world, min.x(), min.y(), outerMax.z()),
@@ -23,7 +22,6 @@ public class ParticleUtil {
                 new Location(world, outerMax.x(), outerMax.y(), outerMax.z()),
                 new Location(world, outerMax.x(), outerMax.y(), min.z())
         };
-
         drawLines(world, corners);
         drawVerticalLines(world, corners, outerMax);
     }
