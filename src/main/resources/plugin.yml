@@ -3,3 +3,6 @@ version: '1.0'
 main: io.github.eon08.plotMan.PlotMan
 api-version: '1.21'
 load: STARTUP
+softdepend: [WorldEdit]
+commands:
+  plot:

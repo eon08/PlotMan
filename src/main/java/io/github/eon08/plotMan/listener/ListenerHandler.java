@@ -8,6 +8,6 @@ public class ListenerHandler {
 
     public ListenerHandler(@NotNull JavaPlugin plugin) {
         PluginManager pm = plugin.getServer().getPluginManager();
-        pm.registerEvents(new PlayerListener(), plugin);
+        pm.registerEvents(new PlayerInteractListener(), plugin);
     }
 }
